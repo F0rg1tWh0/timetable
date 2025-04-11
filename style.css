@@ -1,0 +1,49 @@
+#hours{
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: 2fr repeat(7, 10fr);
+    text-align: center;
+}
+#hours div{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sunday{
+    border-bottom: 1px solid black ;
+}
+.hour, .day {
+    background-color: lightcyan;
+
+}
+.day{
+    border-left: 1px solid black;
+}
+#first{
+    border-left:  1px solid black;
+}
+
+
+
+#search{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vw;
+    gap: 1vw;
+}
+input{
+    width: 15%;
+}
+button{
+    width: 10%;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid black;
+    background: lightcyan;
+    transition: all 0.3s;
+}
+button:hover{
+    background-color: rgb(197, 230, 230);
+}
