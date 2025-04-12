@@ -2,8 +2,8 @@ let button = document.querySelector("button");
 let inputName = document.querySelector("#name");
 let inputDay = document.querySelector("#day");
 let inputTime = document.querySelector("#time");
-let body = document.querySelector('body')
-let hours = document.querySelector('#hours')
+let body = document.querySelector("body");
+let hours = document.querySelector("#hours");
 
 let monday9 = document.querySelector(".monday9");
 let monday10 = document.querySelector(".monday10");
@@ -232,29 +232,30 @@ button.addEventListener("click", function () {
     let value = day + time[i];
     // console.log(value);
     for (let i = 0; i < mondays.length; i++) {
-      Func(mondays[i], mondayList[i], value, name);
-      Func(tuesdays[i], tuesdayList[i], value, name);
-      Func(wednesdays[i], wednesdayList[i], value, name);
-      Func(thursdays[i], thursdayList[i], value, name);
-      Func(fridays[i], fridayList[i], value, name);
-      Func(saturdays[i], saturdayList[i], value, name);
-      Func(sundays[i], sundayList[i], value, name);
+      Func(mondays[i], mondayList[i], value, name, time);
+      Func(tuesdays[i], tuesdayList[i], value, name, time);
+      Func(wednesdays[i], wednesdayList[i], value, name, time);
+      Func(thursdays[i], thursdayList[i], value, name, time);
+      Func(fridays[i], fridayList[i], value, name, time);
+      Func(saturdays[i], saturdayList[i], value, name, time);
+      Func(sundays[i], sundayList[i], value, name, time);
     }
   }
 });
 
-function Func(dayValue, day, value, name) {
-  if (value == day) {
-    let newBlock = document.createElement('div')
-    hours.appendChild(newBlock)
-    newBlock.appendChild(dayValue)
-    newBlock.innerHTML = name
-    newBlock.classList.add('active')
-    // newBlock.style.display = 'grid'
-    // newBlock.classList.add('active')
-    // dayValue.classList.add("active")
-    // dayValue.innerHTML = name;
-    dayValue.style.border = 0;
+function Func(dayValue, day, value, name, time) {
+  if (value == day && value.slice(-1) == time[0] && value.slice(-2) == 'y9') {
+    dayValue.classList.add('active')
+    dayValue.setAttribute('colspan', time.length)
+    dayValue.innerHTML = name + ' ' + time[0] + '-' + time[time.length - 1]
+  }
+  else if (value == day && value.slice(-2) == time[0] && value.slice(-2) != 'y9') {
+    dayValue.classList.add('aactive')
+    dayValue.setAttribute('colspan', time.length)
+    dayValue.innerHTML = name + ' ' + time[0] + '-' + time[time.length - 1]
+  }
+  else if (value == day){
+    dayValue.remove()
   }
 }
 function GetListOfDays(day) {
@@ -265,7 +266,4 @@ function GetListOfDays(day) {
   }
   return list;
 }
-// let newBlock = document.createElement('div')
-//     hours.appendChild(newBlock)
-//     newBlock.innerHTML = 'DCTV GHBDTN'
-//     newBlock.style.backgroundColor = 'black'
+
