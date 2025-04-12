@@ -2,6 +2,8 @@ let button = document.querySelector("button");
 let inputName = document.querySelector("#name");
 let inputDay = document.querySelector("#day");
 let inputTime = document.querySelector("#time");
+let body = document.querySelector('body')
+let hours = document.querySelector('#hours')
 
 let monday9 = document.querySelector(".monday9");
 let monday10 = document.querySelector(".monday10");
@@ -101,17 +103,15 @@ let sunday19 = document.querySelector(".sunday19");
 let sunday20 = document.querySelector(".sunday20");
 let sunday21 = document.querySelector(".sunday21");
 
-
-let mondayList = GetListOfDays('monday')
-let tuesdayList = GetListOfDays('tuesday')
-let wednesdayList = GetListOfDays('wednesday')
-let thursdayList = GetListOfDays('thursday')
-let fridayList = GetListOfDays('friday')
-let saturdayList = GetListOfDays('saturday')
-let sundayList = GetListOfDays('sunday')
+let mondayList = GetListOfDays("monday");
+let tuesdayList = GetListOfDays("tuesday");
+let wednesdayList = GetListOfDays("wednesday");
+let thursdayList = GetListOfDays("thursday");
+let fridayList = GetListOfDays("friday");
+let saturdayList = GetListOfDays("saturday");
+let sundayList = GetListOfDays("sunday");
 
 // console.log(mondayList, tuesdayList, wednesdayList, sundayList)
-
 
 let mondays = [
   monday9,
@@ -172,7 +172,7 @@ let thursdays = [
   thursday19,
   thursday20,
   thursday21,
-]
+];
 let fridays = [
   friday9,
   friday10,
@@ -219,13 +219,15 @@ let sundays = [
   sunday21,
 ];
 
-
-
 button.addEventListener("click", function () {
   let name = inputName.value;
   let day = inputDay.value;
-  let time = inputTime.value.split(",");
-
+  let newTime = inputTime.value.split("-");
+  let time = [];
+  for (let i = 0; i <= newTime[1] - newTime[0]; i++) {
+    time.push((parseInt(newTime[0]) + i).toString());
+  }
+  console.log(time);
   for (let i = 0; i < time.length; i++) {
     let value = day + time[i];
     // console.log(value);
@@ -237,23 +239,33 @@ button.addEventListener("click", function () {
       Func(fridays[i], fridayList[i], value, name);
       Func(saturdays[i], saturdayList[i], value, name);
       Func(sundays[i], sundayList[i], value, name);
-
     }
   }
 });
 
 function Func(dayValue, day, value, name) {
-  if (value == String(day)) {
-    dayValue.style.backgroundColor = "lightcyan";
-    dayValue.innerHTML = name;
-    dayValue.style.borderRight = 0;
+  if (value == day) {
+    let newBlock = document.createElement('div')
+    hours.appendChild(newBlock)
+    newBlock.appendChild(dayValue)
+    newBlock.innerHTML = name
+    newBlock.classList.add('active')
+    // newBlock.style.display = 'grid'
+    // newBlock.classList.add('active')
+    // dayValue.classList.add("active")
+    // dayValue.innerHTML = name;
+    dayValue.style.border = 0;
   }
 }
 function GetListOfDays(day) {
-  let list = []
+  let list = [];
   for (let i = 9; i < 22; i++) {
     let a = day + i.toString();
     list.push(a);
   }
-  return list
+  return list;
 }
+// let newBlock = document.createElement('div')
+//     hours.appendChild(newBlock)
+//     newBlock.innerHTML = 'DCTV GHBDTN'
+//     newBlock.style.backgroundColor = 'black'
