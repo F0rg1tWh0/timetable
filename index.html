@@ -1,161 +1,170 @@
-<!DOCTYE html>
-<html lang="en">
+<!DOCTYPE html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewort" content="widtd=device-widtd, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" tye="image/x-icon">
-    <link rel="stylesheet" href="./style.css">
-    <title>Timetable</title>
+	<meta charset="UTF-8" />
+	<meta name="viewort" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="favicon.ico" tye="image/x-icon" />
+	<link rel="stylesheet" href="./style.css" />
+	<title>Timetable</title>
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th></th>
-                <th class="hour">9:00</th>
-                <th class="hour">10:00</th>
-                <th class="hour">11:00</th>
-                <th class="hour">12:00</th>
-                <th class="hour">13:00</th>
-                <th class="hour">14:00</th>
-                <th class="hour">15:00</th>
-                <th class="hour">16:00</th>
-                <th class="hour">17:00</th>
-                <th class="hour">18:00</th>
-                <th class="hour">19:00</th>
-                <th class="hour">20:00</th>
-                <th class="hour">21:00</th>
-            </tr>
-        </thead>
-        </tbody>
-            <tr>
-                <td class="day monday">Пн</td>
-                <td class="monday monday9 "></td>
-                <td class="monday monday10"></td>
-                <td class="monday monday11"></td>
-                <td class="monday monday12"></td>
-                <td class="monday monday13"></td>
-                <td class="monday monday14"></td>
-                <td class="monday monday15"></td>
-                <td class="monday monday16"></td>
-                <td class="monday monday17"></td>
-                <td class="monday monday18"></td>
-                <td class="monday monday19"></td>
-                <td class="monday monday20"></td>
-                <td class="monday monday21"></td>
-            </tr>
-            <tr>
-                <td class="day tuesday">Вт</td>
-                <td class="tuesday tuesday9 "></td>
-                <td class="tuesday tuesday10"></td>
-                <td class="tuesday tuesday11"></td>
-                <td class="tuesday tuesday12"></td>
-                <td class="tuesday tuesday13"></td>
-                <td class="tuesday tuesday14"></td>
-                <td class="tuesday tuesday15"></td>
-                <td class="tuesday tuesday16"></td>
-                <td class="tuesday tuesday17"></td>
-                <td class="tuesday tuesday18"></td>
-                <td class="tuesday tuesday19"></td>
-                <td class="tuesday tuesday20"></td>
-                <td class="tuesday tuesday21"></td>
-            </tr>
-            <tr>
-                <td class="day wednesday">Ср</td>
-                <td class="wednesday wednesday9 "></td>
-                <td class="wednesday wednesday10"></td>
-                <td class="wednesday wednesday11"></td>
-                <td class="wednesday wednesday12"></td>
-                <td class="wednesday wednesday13"></td>
-                <td class="wednesday wednesday14"></td>
-                <td class="wednesday wednesday15"></td>
-                <td class="wednesday wednesday16"></td>
-                <td class="wednesday wednesday17"></td>
-                <td class="wednesday wednesday18"></td>
-                <td class="wednesday wednesday19"></td>
-                <td class="wednesday wednesday20"></td>
-                <td class="wednesday wednesday21"></td>
-            </tr> 
-                <td class="day tdursday">Чт</td>
-                <td class="thursday thursday9 "></td>
-                <td class="thursday thursday10"></td>
-                <td class="thursday thursday11"></td>
-                <td class="thursday thursday12"></td>
-                <td class="thursday thursday13"></td>
-                <td class="thursday thursday14"></td>
-                <td class="thursday thursday15"></td>
-                <td class="thursday thursday16"></td>
-                <td class="thursday thursday17"></td>
-                <td class="thursday thursday18"></td>
-                <td class="thursday thursday19"></td>
-                <td class="thursday thursday20"></td>
-                <td class="thursday thursday21"></td>
-            </tr>
-            <tr>
-                <td class="day friday">Пт</td>
-                <td class="friday friday9 "></td>
-                <td class="friday friday10"></td>
-                <td class="friday friday11"></td>
-                <td class="friday friday12"></td>
-                <td class="friday friday13"></td>
-                <td class="friday friday14"></td>
-                <td class="friday friday15"></td>
-                <td class="friday friday16"></td>
-                <td class="friday friday17"></td>
-                <td class="friday friday18"></td>
-                <td class="friday friday19"></td>
-                <td class="friday friday20"></td>
-                <td class="friday friday21"></td>
-            </tr>
-            <tr>
-                <td class="day saturday">Сб</td>
-                <td class="saturday saturday9 "></td>
-                <td class="saturday saturday10"></td>
-                <td class="saturday saturday11"></td>
-                <td class="saturday saturday12"></td>
-                <td class="saturday saturday13"></td>
-                <td class="saturday saturday14"></td>
-                <td class="saturday saturday15"></td>
-                <td class="saturday saturday16"></td>
-                <td class="saturday saturday17"></td>
-                <td class="saturday saturday18"></td>
-                <td class="saturday saturday19"></td>
-                <td class="saturday saturday20"></td>
-                <td class="saturday saturday21"></td>
-            </tr>
-            <tr>
-                <td class="day sunday">Вс</td>
-                <td class="sunday sunday9"></td>
-                <td class="sunday sunday10"></td>
-                <td class="sunday sunday11"></td>
-                <td class="sunday sunday12"></td>
-                <td class="sunday sunday13"></td>
-                <td class="sunday sunday14"></td>
-                <td class="sunday sunday15"></td>
-                <td class="sunday sunday16"></td>
-                <td class="sunday sunday17"></td>
-                <td class="sunday sunday18"></td>
-                <td class="sunday sunday19"></td>
-                <td class="sunday sunday20"></td>
-                <td class="sunday sunday21"></td>
-            </tr> 
-        </tbody>
-</table>
-    <section id="search">
-        <input id = "name" type="text" placeholder="Введите название">
-        <input list="character" id = "day" type="text" placeholder="Введите день(на англ)">
-        <datalist id="character">
-            <option value="monday"></option>
-            <option value="tuesday"></option>
-            <option value="wednesday"></option>
-            <option value="thursday"></option>
-            <option value="friday"></option>
-            <option value="saturday"></option>
-            <option value="sunday"></option>
-          </datalist>
-        <input id = "time" type="text" placeholder="Введите время(через тире - 9-12)">
-        <button>Добавить</button>
-    </section>
-    <script src="./js.js"></script>
+	<table>
+		<thead>
+			<tr>
+				<th></th>
+				<th class="hour">9:00</th>
+				<th class="hour">10:00</th>
+				<th class="hour">11:00</th>
+				<th class="hour">12:00</th>
+				<th class="hour">13:00</th>
+				<th class="hour">14:00</th>
+				<th class="hour">15:00</th>
+				<th class="hour">16:00</th>
+				<th class="hour">17:00</th>
+				<th class="hour">18:00</th>
+				<th class="hour">19:00</th>
+				<th class="hour">20:00</th>
+				<th class="hour">21:00</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="day monday">Пн</td>
+				<td class="monday monday9"></td>
+				<td class="monday monday10"></td>
+				<td class="monday monday11"></td>
+				<td class="monday monday12"></td>
+				<td class="monday monday13"></td>
+				<td class="monday monday14"></td>
+				<td class="monday monday15"></td>
+				<td class="monday monday16"></td>
+				<td class="monday monday17"></td>
+				<td class="monday monday18"></td>
+				<td class="monday monday19"></td>
+				<td class="monday monday20"></td>
+				<td class="monday monday21"></td>
+			</tr>
+			<tr>
+				<td class="day tuesday">Вт</td>
+				<td class="tuesday tuesday9"></td>
+				<td class="tuesday tuesday10"></td>
+				<td class="tuesday tuesday11"></td>
+				<td class="tuesday tuesday12"></td>
+				<td class="tuesday tuesday13"></td>
+				<td class="tuesday tuesday14"></td>
+				<td class="tuesday tuesday15"></td>
+				<td class="tuesday tuesday16"></td>
+				<td class="tuesday tuesday17"></td>
+				<td class="tuesday tuesday18"></td>
+				<td class="tuesday tuesday19"></td>
+				<td class="tuesday tuesday20"></td>
+				<td class="tuesday tuesday21"></td>
+			</tr>
+			<tr>
+				<td class="day wednesday">Ср</td>
+				<td class="wednesday wednesday9"></td>
+				<td class="wednesday wednesday10"></td>
+				<td class="wednesday wednesday11"></td>
+				<td class="wednesday wednesday12"></td>
+				<td class="wednesday wednesday13"></td>
+				<td class="wednesday wednesday14"></td>
+				<td class="wednesday wednesday15"></td>
+				<td class="wednesday wednesday16"></td>
+				<td class="wednesday wednesday17"></td>
+				<td class="wednesday wednesday18"></td>
+				<td class="wednesday wednesday19"></td>
+				<td class="wednesday wednesday20"></td>
+				<td class="wednesday wednesday21"></td>
+			</tr>
+
+			<tr>
+				<td class="day tdursday">Чт</td>
+				<td class="thursday thursday9"></td>
+				<td class="thursday thursday10"></td>
+				<td class="thursday thursday11"></td>
+				<td class="thursday thursday12"></td>
+				<td class="thursday thursday13"></td>
+				<td class="thursday thursday14"></td>
+				<td class="thursday thursday15"></td>
+				<td class="thursday thursday16"></td>
+				<td class="thursday thursday17"></td>
+				<td class="thursday thursday18"></td>
+				<td class="thursday thursday19"></td>
+				<td class="thursday thursday20"></td>
+				<td class="thursday thursday21"></td>
+			</tr>
+			<tr>
+				<td class="day friday">Пт</td>
+				<td class="friday friday9"></td>
+				<td class="friday friday10"></td>
+				<td class="friday friday11"></td>
+				<td class="friday friday12"></td>
+				<td class="friday friday13"></td>
+				<td class="friday friday14"></td>
+				<td class="friday friday15"></td>
+				<td class="friday friday16"></td>
+				<td class="friday friday17"></td>
+				<td class="friday friday18"></td>
+				<td class="friday friday19"></td>
+				<td class="friday friday20"></td>
+				<td class="friday friday21"></td>
+			</tr>
+			<tr>
+				<td class="day saturday">Сб</td>
+				<td class="saturday saturday9"></td>
+				<td class="saturday saturday10"></td>
+				<td class="saturday saturday11"></td>
+				<td class="saturday saturday12"></td>
+				<td class="saturday saturday13"></td>
+				<td class="saturday saturday14"></td>
+				<td class="saturday saturday15"></td>
+				<td class="saturday saturday16"></td>
+				<td class="saturday saturday17"></td>
+				<td class="saturday saturday18"></td>
+				<td class="saturday saturday19"></td>
+				<td class="saturday saturday20"></td>
+				<td class="saturday saturday21"></td>
+			</tr>
+			<tr>
+				<td class="day sunday">Вс</td>
+				<td class="sunday sunday9"></td>
+				<td class="sunday sunday10"></td>
+				<td class="sunday sunday11"></td>
+				<td class="sunday sunday12"></td>
+				<td class="sunday sunday13"></td>
+				<td class="sunday sunday14"></td>
+				<td class="sunday sunday15"></td>
+				<td class="sunday sunday16"></td>
+				<td class="sunday sunday17"></td>
+				<td class="sunday sunday18"></td>
+				<td class="sunday sunday19"></td>
+				<td class="sunday sunday20"></td>
+				<td class="sunday sunday21"></td>
+			</tr>
+		</tbody>
+	</table>
+	<section id="search">
+		<input id="name" type="text" placeholder="Введите название" />
+		<input
+			list="character"
+			id="day"
+			type="text"
+			placeholder="Введите день(на англ)"
+		/>
+		<datalist id="character">
+			<option value="monday"></option>
+			<option value="tuesday"></option>
+			<option value="wednesday"></option>
+			<option value="thursday"></option>
+			<option value="friday"></option>
+			<option value="saturday"></option>
+			<option value="sunday"></option>
+		</datalist>
+		<input
+			id="time"
+			type="text"
+			placeholder="Введите время(через тире - 9-12)"
+		/>
+		<button><span>Добавить</span></button>
+	</section>
+	<script src="./js.js"></script>
 </body>
-</html>
