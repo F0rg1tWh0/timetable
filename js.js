@@ -227,10 +227,8 @@ button.addEventListener('click', function () {
 	for (let i = 0; i <= newTime[1] - newTime[0]; i++) {
 		time.push((parseInt(newTime[0]) + i).toString())
 	}
-	console.log(time)
 	for (let i = 0; i < time.length; i++) {
 		let value = day + time[i]
-		// console.log(value);
 		for (let i = 0; i < mondays.length; i++) {
 			Func(mondays[i], mondayList[i], value, name, time)
 			Func(tuesdays[i], tuesdayList[i], value, name, time)
@@ -246,16 +244,15 @@ button.addEventListener('click', function () {
 function Func(dayValue, day, value, name, time) {
 	if (value == day && value.slice(-1) == time[0] && value.slice(-2) == 'y9') {
 		dayValue.classList.add('active')
-		dayValue.setAttribute('colspan', time.length)
+		dayValue.setAttribute('colspan', time.length - 1)
 		dayValue.innerHTML = name
 	} else if (
-		value == day &&
-		value.slice(-2) == time[0] &&
-		value.slice(-2) != 'y9'
+		value == day && value.slice(-2) == time[0] && value.slice(-2) != 'y9'
 	) {
-		dayValue.classList.add('aactive')
-		dayValue.setAttribute('colspan', time.length)
+		dayValue.classList.add('active')
+		dayValue.setAttribute('colspan', time.length - 1)
 		dayValue.innerHTML = name
+	} else if (value == day && value.slice(-2) == time[1]) {
 	} else if (value == day) {
 		dayValue.remove()
 	}
